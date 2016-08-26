@@ -1,0 +1,56 @@
+---
+title: "Curso Introductorio ITAM 2016"
+date: "agosto-septiembre de 2016"
+output: html_document
+---
+
+Imparte: [Mónica Zamudio](https://github/monzalo14)
+
+## Temario:
+
+1. Introducción a R
+
+      i) Panorama general de R
+      
+      ii) ¿Por qué R?
+      
+      iii) CRAN y librerías
+      
+      iv) Ayuda de R
+      
+      v) Sintaxis básica
+      
+      vi) Algunos tipos de datos y objetos
+      
+      vii) Estructuras, funciones y ciclos
+
+2. Datos y el paradigma Split-Apply-Combine
+
+    i) Matrices, data frames y otros objetos
+    
+    ii) La familia apply
+    
+    iii) TidyR y el criterio de datos limpios
+    
+    iv) Introducción a dplyr
+    
+        - El operador pipe
+    
+        - 5 funciones básicas
+        
+    v) Bases de datos relacionales: dplyr y sus *joins*
+    
+3. Gramática de gráficas
+   
+    i) Introducción a la gramática de gráficas
+   
+    ii) Algunos usos de ggplot2
+  
+
+## Programa sugerido:
+
+*  Sesión 1: Unidad 1 (temas i-v)
+
+*  Sesión 2: Unidad 1 (temas vi-vii), Unidad 2 (temas i-iv)
+
+*  Sesión 3: Unidad 2 (tema v), Unidad 3
