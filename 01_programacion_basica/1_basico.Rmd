@@ -830,6 +830,10 @@ secuencia de comandos que se especifica dentro del mismo.
 for (i in 1:3 ){
   print(paste0("i vale: ", i))
 }
+
+for(x in a){
+  print(x)
+}
 ```
 
 Es posible también iterar directamente sobre vectores o partes de vectores.

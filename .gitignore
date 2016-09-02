@@ -31,3 +31,4 @@ vignettes/*.pdf
 
 # Emacs
 **/*.*~
+.Rproj.user
