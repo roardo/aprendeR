@@ -27,11 +27,42 @@ Aunque es la más popular, no es la unica. Existen otras plataformas como BitBuc
 * Compatibilidad
 * Precio (Es gratis para repositorios públicos)
 
-[^1]: *Para una mayor exposición de cada punto  https://gist.github.com/equintana/57a55dfb0337f5cd15cd*
+*Para una mayor exposición de cada punto https://gist.github.com/equintana/57a55dfb0337f5cd15cd*
 
 ## Instalación
 
-https://git-scm.com/downloads
+En esta página puedes encontrar todo lo referente a la instalación de git sin importar cual sea tu sistema operativo.  
+*https://git-scm.com/downloads*
+
+
+### Linux
+
+####Debian
+```bash
+$ sudo apt install git
+```
+
+####Fedora 
+```bash
+$ yum install git-core
+```
+
+### Windows
+
+[Aqui](https://git-for-windows.github.io/) puedes ver lo que tienes que hacer para tener git en Windows.
+
+
+### Mac
+
+Hay dos formas de instalarlo:
+
+1. [Via el instalador git](http://code.google.com/p/git-osx-installer)
+2. Con [MacPorts](http://www.macports.org) instalado:
+
+```bash
+$ sudo port install git-core +svn +doc +bash_completion +gitweb
+```
+
 
 ##Diferencia entre repo local y repo remoto
 Image de comparación entre archivo modificado y sin modificasr.
