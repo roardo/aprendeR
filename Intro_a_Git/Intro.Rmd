@@ -8,24 +8,24 @@ Aunque es la más popular, no es la unica. Existen otras plataformas como BitBuc
 
 ### Entonces... ¿Qué es Git?
 
-- Git es un sistema de control de versiones que sirve para dar seguimiento a los cambios en los archivos de una computadora y coordinar el trabajo de esos archivos entre multiples personas. 
+* Git es un sistema de control de versiones que sirve para dar seguimiento a los cambios en los archivos de una computadora y coordinar el trabajo de esos archivos entre multiples personas. 
 
-- Principalmente es usado para el desarrollo de software, aunque puede ser usado para mantener un seguimiento de cualquier archivo.
+* Principalmente es usado para el desarrollo de software, aunque puede ser usado para mantener un seguimiento de cualquier archivo.
 
-- Git fue creado en el año 2005 por Linus Torvalds (Sí, por él Linux tiene ese nombre) para coordinal el desarrollo del kernel Linux.
+* Git fue creado en el año 2005 por Linus Torvalds (Sí, por él Linux tiene ese nombre) para coordinal el desarrollo del kernel Linux.
 
 ## ¿Por qué usar Github?
 
-- Versionar tu código
-- Aprender y experimentar
-- Contribuir
-- Trabajo en equipo
-- Estar informado(a)
-- Visor de código
-- Mostrar tus conocimientos
-- Registro de incidencias
-- Compatibilidad
-- Precio (Es gratis para repositorios públicos)
+* Versionar tu código
+* Aprender y experimentar
+* Contribuir
+* Trabajo en equipo
+* Estar informado(a)
+* Visor de código
+* Mostrar tus conocimientos
+* Registro de incidencias
+* Compatibilidad
+* Precio (Es gratis para repositorios públicos)
 
 [^1]: *Para una mayor exposición de cada punto  https://gist.github.com/equintana/57a55dfb0337f5cd15cd*
 
@@ -34,9 +34,9 @@ Aunque es la más popular, no es la unica. Existen otras plataformas como BitBuc
 https://git-scm.com/downloads
 
 ##Diferencia entre repo local y repo remoto
-Imageb de comparación entre archivo modificado y sin modificasr.
+Image de comparación entre archivo modificado y sin modificasr.
 
-##Comandos basicos
+##Comandos básicos
 
 - git clone
 - git add
