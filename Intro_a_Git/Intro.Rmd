@@ -1,19 +1,35 @@
 #Github
+
 ##¿Qué es Github?
 
 GitHub es una plataforma para alojar proyectos que utiliza el sistema de control de versiones git.
 
-Aunque es la más popular, no es la unica. Existen otras como BitBucket que 
+Aunque es la más popular, no es la unica. Existen otras plataformas como BitBucket que también permiten realizar tareas similares.
 
 ### Entonces... ¿Qué es Git?
 
+- Git es un sistema de control de versiones que sirve para dar seguimiento a los cambios en los archivos de una computadora y coordinar el trabajo de esos archivos entre multiples personas. 
 
+- Principalmente es usado para el desarrollo de software, aunque puede ser usado para mantener un seguimiento de cualquier archivo.
 
-##¿Porque usar Github?
-- Hay otros más que github bitbucket
-##Git
+- Git fue creado en el año 2005 por Linus Torvalds (Sí, por él Linux tiene ese nombre) para coordinal el desarrollo del kernel Linux.
 
-##Instalacion
+## ¿Por qué usar Github?
+
+- Versionar tu código
+- Aprender y experimentar
+- Contribuir
+- Trabajo en equipo
+- Estar informado(a)
+- Visor de código
+- Mostrar tus conocimientos
+- Registro de incidencias
+- Compatibilidad
+- Precio (Es gratis para repositorios públicos)
+
+[^1]: *Para una mayor exposición de cada punto  https://gist.github.com/equintana/57a55dfb0337f5cd15cd*
+
+## Instalación
 
 https://git-scm.com/downloads
 
