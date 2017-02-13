@@ -1,0 +1,29 @@
+#Github
+##¿Qué es Github?
+
+GitHub es una plataforma para alojar proyectos que utiliza el sistema de control de versiones git.
+
+Aunque es la más popular, no es la unica. Existen otras como BitBucket que 
+
+### Entonces... ¿Qué es Git?
+
+
+
+##¿Porque usar Github?
+- Hay otros más que github bitbucket
+##Git
+
+##Instalacion
+
+https://git-scm.com/downloads
+
+##Diferencia entre repo local y repo remoto
+Imageb de comparación entre archivo modificado y sin modificasr.
+
+##Comandos basicos
+
+- git clone
+- git add
+- git status
+- git pull
+- git push
