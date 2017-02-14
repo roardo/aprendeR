@@ -72,15 +72,19 @@ Actualiza a la computadora los cambios realizados en el repositorio remoto.
 
 Revisa los distintos repos remotos con los que está conectado tu repo local.
 
-- git status
+> git status
+
 Indica el estado de los archivos. Si se ha modificado algun archivo, si todo está en orden, etc. Comúnmente se usa antes de hacer git push para verificar que los cambios se subiran correctamente al repositorio remoto.  
 
-- git add .
+> git add .
+
 Añade los cambios de todos los archivos para que puedan ser subidos al repositorio remoto. También podemos agregar nuestros cambios archivo por archivo, si queremos tener más control sobre lo que agregamos.
 
-- git commit -m "Mensaje"
+> git commit -m "Mensaje"
+
 Después de haber modificado los archivos y de haberlos añadidos con un git add se ejecuta este comando para añadir un pequeño mensaje indicando que fue lo que se hizo.   
 
-- git push
+> git push
+
 Sube la rama al repositorio remoto. Al ejecutarlo se pedirá tu nombre de usuario y contraseña para poder guardarlo en tu repositorio de github.
 
