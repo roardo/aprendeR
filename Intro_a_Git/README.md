@@ -61,13 +61,15 @@ Una vez que todos los cambios han sido realizados en el repositorio local y se h
 ##Comandos básicos de git en la computadora
 
 > git clone "https://github.com/<Nombre_Usuario>/<repo_a_clonar>/"
+
 Clona completamente en tu computadora el repositorio remoto de esa dirección. (Se puede clonar el repo de cualquier usuario, aunque debe de considerarse que si se clona el repo de otro usuario no se podra hacer un git push a menos de que se posean las credenciales de ese usuario ya que lo que se estaria intentando sería guardar nuestros cambios en un repo ajeno)
 
 > git pull
 
 Actualiza a la computadora los cambios realizados en el repositorio remoto.
 
-- > git remote -v
+> git remote -v
+
 Revisa los distintos repos remotos con los que está conectado tu repo local.
 
 - git status
