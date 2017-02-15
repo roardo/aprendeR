@@ -60,31 +60,31 @@ Una vez que todos los cambios han sido realizados en el repositorio local y se h
 
 ##Comandos básicos de git en la computadora
 
-> git clone "https://github.com/<Nombre_Usuario>/<repo_a_clonar>/"
+`git clone "https://github.com/<Nombre_Usuario>/<repo_a_clonar>/"`
 
 Clona completamente en tu computadora el repositorio remoto de esa dirección. (Se puede clonar el repo de cualquier usuario, aunque debe de considerarse que si se clona el repo de otro usuario no se podra hacer un git push a menos de que se posean las credenciales de ese usuario ya que lo que se estaria intentando sería guardar nuestros cambios en un repo ajeno)
 
-> git pull
+`git pull`
 
 Actualiza a la computadora los cambios realizados en el repositorio remoto.
 
-> git remote -v
+`git remote -v`
 
 Revisa los distintos repos remotos con los que está conectado tu repo local.
 
-> git status
+`git status`
 
 Indica el estado de los archivos. Si se ha modificado algun archivo, si todo está en orden, etc. Comúnmente se usa antes de hacer git push para verificar que los cambios se subiran correctamente al repositorio remoto.  
 
-> git add .
+`git add`
 
 Añade los cambios de todos los archivos para que puedan ser subidos al repositorio remoto. También podemos agregar nuestros cambios archivo por archivo, si queremos tener más control sobre lo que agregamos.
 
-> git commit -m "Mensaje"
+`git commit -m "Mensaje"`
 
 Después de haber modificado los archivos y de haberlos añadidos con un git add se ejecuta este comando para añadir un pequeño mensaje indicando que fue lo que se hizo.   
 
-> git push
+`git push`
 
 Sube la rama al repositorio remoto. Al ejecutarlo se pedirá tu nombre de usuario y contraseña para poder guardarlo en tu repositorio de github.
 
