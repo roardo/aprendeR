@@ -1,14 +1,5 @@
----
-title: "¿Por qué R?"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ### 1. R es un ambiente.
-Sus creadores buscan sugerir con esto que R está pensado "como un sistema planeado y coherente, en lugar de una acumulación incremental de herramientas poco flexibles y poco relacionadas entre sí"[^1]. Como ambiente, R da cabida a que existan objetos muy distintos y útiles, que puedan comunicarse y combinarse. 
+Sus creadores buscan sugerir con esto que R está pensado "como un sistema planeado y coherente, en lugar de una acumulación incremental de herramientas poco flexibles y poco relacionadas entre sí" ^1^. Como ambiente, R da cabida a que existan objetos muy distintos y útiles, que puedan comunicarse y combinarse. 
 
 "En particular, R contiene:
 
@@ -22,7 +13,7 @@ Sus creadores buscan sugerir con esto que R está pensado "como un sistema plane
 
 *  Un lenguaje de programación simple, efectivo y bien desarrollado (llamado 'S') que nos permite utilizar estructuras de control."
 
-[^1]: *Tomado de https://cran.r-project.org/doc/manuals/R-intro.html*
+^1^: *Tomado de https://cran.r-project.org/doc/manuals/R-intro.html*
 
 ### 2. R es software libre 
 
