@@ -1,6 +1,5 @@
 ---
 title: "Tareas"
-author: "Mónica Zamudio"
 output: html_document
 ---
 
@@ -122,17 +121,111 @@ En esta carpeta con tu nombre de usuario vas a hacer todas tus tareas.
 Crea un nuevo **R Script** en RStudio, llamado **tarea_1.R**. Guárdalo en tu carpeta de alumna. 
 
 ### Primer ejercicio
-1. Crea una lista con elementos **solamente numéricos**, de elementos y dimensiones que quieras. Utiliza la función `lapply()` para sacarle la media a cada uno de sus elementos. 
+1. Crea una lista con elementos **solamente numéricos**, de elementos y dimensiones que quieras. Utiliza la función `lapply()` para sacarle la media a cada uno de sus elementos.
+
+```{r}
+mi_lista <- list(primer = 1:20, 
+                 segundo = 5,
+                 tercero = sqrt(1:20))
+```
+
+Noten que, al asignarles un valor, pueden escribir los nombres de cualquier lista sin comillas. 
+
 2. Reemplaza algunos componentes de los elementos de tu lista con datos faltantes, i.e. `NA`. Verifica que estos componentes de hecho sean `NA`. 
+
+```{r}
+mi_lista$primer[1:5] <- NA
+mi_lista$tercero[mi_lista$tercero > 5] <- NA
+```
+
+Para verificar que de hecho sean NAs, tengo dos opciones. La primera, volver a usar lapply o algo así para ver para cada elemento de la lista:
+
+```{r}
+lapply(mi_lista, is.na)
+```
+
+O hacerlo elemento a elemento:
+
+```{r}
+is.na(mi_lista$primer)
+is.na(mi_lista$tercero)
+```
+
 3. ¿Puedes encontrar una manera de sacarle la media a los elementos de tu lista que tienen datos faltantes?
+
+```{r}
+lapply(mi_lista, mean, na.rm = T)
+```
+
+Esta es la forma más fácil/eficiente, pero ¡**bravo** a quienes se pusieron creativos con esto! 
 
 ### Segundo ejercicio
 1. Crea un vector (o una matriz) de tipo `character`. 
+
+```{r}
+m <- paste0('m_', letters[1:25]) %>% matrix(5)
+```
+
+Noten cómo aproveché que ya aprendimos sobre el operador *pipe*: `%>%`, para probar que jala con muchas funciones aparte de las de `dplyr`.
+
 2. Ponle nombres a sus columnas
+
+Para evitar declarar de nuevo la matriz, podemos usar la función `colnames()`:
+
+```{r}
+colnames(m) <- LETTERS[1:5]
+```
+
+También existen `rownames()`, y `names()` (esta última aplica para listas).
+
 3. Verifica qué elementos de la matriz cumplan alguna condición. Por ejemplo: ¿Cuántos elementos contienen la letra *'a'*? (tip: busca la ayuda de las funciones grep: teclea `?grep` en tu consola).
+
+Puedo usar `grep()` para buscar los índices y seleccionar los elementos correspondientes:
+
+```{r}
+m[grep('a', m)]
+```
+
+También puedo usar `grepl()` para cuando quiero saber esto sobre **todos** los elementos de la matriz:
+
+```{r}
+grepl('a', m)
+```
+Esto es especialmente útil cuando quiero contar cosas (recuerden que puedo sumar valores lógicos como si fueran números: TRUE suma 1 y FALSE suma 0). Así, puedo contar cuántos elementos de mi matriz tienen esta comdición:
+
+```{r}
+sum(grepl('a', m))
+```
+
+Esto es poco interesante porque escogí una condición poco interesante, pero puede ser muy útil en el futuro.
+
 4. Selecciona alguna columna de la matriz:
   - Por sus índices
   - Por su nombre
   * Recuerda que, con las matrices, le tienes que decir a `R` qué filas vas a seleccionar, no sólo qué   columnas.
 
+Esto me da la primera fila de *m*:
 
+```{r}
+m[1 ,]
+```
+
+Esto, me da la entrada *1,2*:
+
+```{r}
+m[1,2]
+```
+
+Esto, la cuarta columna:
+
+```{r}
+m[, 4]
+```
+
+Finalmente, esto me da la columna de nombre *A*:
+
+```{r}
+m[, 'A']
+```
+
+Nota que necesito especificarle qué filas tomar, a diferencia de si tuviera una lista. 

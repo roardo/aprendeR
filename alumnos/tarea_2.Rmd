@@ -1,0 +1,20 @@
+---
+title: "Tarea 2"
+
+output: html_document
+---
+
+# Dataframes
+
+Usa la base `mtcars`.
+ 
+- Dame un data frame con la media de millas por galón por cada tipo de transmisión. Si tienes duda sobre las variables, trata con `?mtcars`.
+
+- Saca la desviación estándar de la potencia (caballos de fuerza), para los distintos números de cilindros. 
+
+- Crea una nueva variable que sea la multiplicación de *qsec* y *disp*.
+
+- Muestrame los 10 valores más altos de la variable `hp`, para los coches de transmisión manual.
+
+- ¿Por qué `mtcars %>% select('hp')` no funciona? ¿Qué tendrías que hacer para que funcionara?
+ 
