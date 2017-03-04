@@ -1,0 +1,102 @@
+---
+title: "tarea_3"
+author: "Mónica Zamudio"
+date: "28 de febrero de 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(tidyr)
+raw <- readRDS('../02_manipulacion/data/raw.RDS')
+calc_tidy <- readRDS('../02_manipulacion/data/calc_tidy.RDS')
+```
+
+# Tidy Data
+
+## Ejercicio 1
+
+**Nota:** el resto de este ejercicio tiene que hacerse con `02_manipulacion` como directorio de trabajo.
+
+Primero, necesitamos generar los datos que vamos a usar. 
+Corre el script *pew.R*. Para correr un script, basta con escribir *source('pew.R')*.
+
+Mira los datos *raw*. Nota cómo no están en formato *tidy*.
+```{r}
+kable(raw)
+```
+
+Usa el paquete *tidyr* para pasarlos a formato *tidy*. Nota que necesitas terminar con una tabla como esta:
+
+```{r, echo = F}
+raw %>%
+  gather(key = income, 
+         value = frequency, -religion) %>%
+  head(15) %>%
+  kable()
+```
+
+## Ejercicio 2
+
+Usa este pedazo de código para generar un nuevo dataframe:
+
+```{r}
+misdatos_vertical <- data.frame(region = sort(rep(LETTERS[1:10], 3)),
+                                type = rep(c('indice_desarrollo',
+                                           'indice_marginacion',
+                                           'indice_seguridad'), 10),
+                                value = rnorm(30))
+
+kable(misdatos_vertical)
+```
+
+Nota cómo tenemos tres variables en una sola columna. Pasa los datos a formato tidy (i.e., una columna para indice de desarrollo, indice de marginación y otra para índice de seguridad).
+
+## Ejercicio 3
+
+Vamos a hacer un ejercicio muy útil para nosotros, en particular: sacar la frecuencia en que aparecen demandados.
+Corre el siguiente código para generar una matriz de datos:
+
+```{r}
+demandados <- c('Walmart',
+                'Oxxo',
+                'Electra',
+                'Elmex Superior')
+demandados2 <- c('Quien resulte responsable',
+                 'Manpower',
+                 'Compis de Outsourcing, S.A')
+demandados3 <- c('IMSS', 'SAR', 'INFONAVIT', 'Otro compi')
+datos_calculadora <- data.frame(id_exp = paste0('2_', 
+                                                sample(1:200, 20),
+                                                '_2017'),
+                                d_1 = sample(demandados, 20, replace = T),
+                                d_2 = sample(demandados2, 20, replace = T),
+                                d_3 = sample(demandados3, 20, replace = T)) 
+```
+
+Los datos se ven así:
+
+```{r}
+datos_calculadora %>%
+  head(20) %>%
+  kable()
+```
+
+
+Dame una tabla con una sola columna de demandados. Quiero saber con qué frecuencia aparecen en nuestra base de datos. Al final, queremos una tabla así:
+
+```{r, echo = F}
+calc_tidy %>%
+  kable()
+``` 
+
+Tip: tienes que, primero, colapsar a todos los demandados en una sola columna. Para eso, recuerda cómo usamos `gather` en la clase. Después, necesitas colapsar la base de datos. Recuerda cómo usamos `summarise` la clase pasada (probablemente tengas que agrupar antes de `summarise`, considéralo).
+Si te sale este mensaje de warning:
+
+```{r}
+'attributes are not identical across measure variables; they will be dropped'
+```
+
+No te preocupes, eso no es un problema para nosotras.
