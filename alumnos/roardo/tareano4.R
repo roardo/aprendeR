@@ -50,16 +50,12 @@ df %>% select(starts_with('nombre_d'), id_exp) %>%
 #########Terminaciones y cuantificaciones##############
 
 
-#Funciona!#
+#Limpia la variable c_sal_caidos:
 df %>% mutate(c_sal_caidos= 
                 as.numeric(gsub('[^[:digit:]]','',c_sal_caidos))) %>%
   select(starts_with("c_")) %>%
-  View()
+  View() 
 
-#Dado que los números que aparecen ahí son en realidad texto
-#lo mejor que se me ocurre es primero pasar cada entrada a número
-#si en realidad es un número entonces lo pasa a número, de otra forma
-#lo pone en cero
 na_function = function(x){
   dummy <- ifelse(is.na(x),0,x)
   dummy
@@ -68,7 +64,8 @@ otra_function = function(x){
   dummy <- gsub('[^[:digit:]]','',x)
 }
 
-#El problema que resta son los espacios vacios, no sé como los interprete R
+#El problema que resta son los espacios vacios, no sé como los interprete R y 
+# por tanto no sé cómo quitarlos
 df %>% 
   mutate(monto_hextra_sem = otra_function(monto_hextra_sem)) %>%
   mutate(monto_vac = otra_function(monto_vac)) %>%
